@@ -700,7 +700,7 @@
                 document.querySelector('.container').classList.remove('active');
             }
 
-            if(typeof tl !== 'object' && window.matchMedia('(min-aspect-ratio: 5/6) or (hover:hover)').matches) {
+            if(typeof tl !== 'object' && (window.matchMedia('(hover:hover)').matches || window.matchMedia('(min-aspect-ratio: 5/6) and (hover:none)').matches)) {
                 tl = new TimelineMax({
                     repeat: -1,
                     yoyo: true
